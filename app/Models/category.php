@@ -8,10 +8,19 @@ use Illuminate\Database\Eloquent\Model;
 class category extends Model
 {
     use HasFactory;
-    protected $fillable = ['name'];
+    protected $fillable = ['name','image'];
     
     public function products()
     {
         return $this->hasMany(Product::class, 'category_id');
+    }
+
+    public function setImageAttribute($value)
+    {
+        $this->attributes['image'] = ImageHelper::saveImage($value, 'image');
+    }
+    public function getImageAttribute($value)
+    {
+        return asset($value);
     }
 }
