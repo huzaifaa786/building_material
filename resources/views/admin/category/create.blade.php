@@ -5,7 +5,7 @@
     <div class="col-md-6">
         <div class="card shadow-lg">
             <div class="card-body">
-                <form method="post" action="{{ route('admin.category.store') }}">
+                <form method="post" action="{{ route('admin.category.store') }}"  enctype="multipart/form-data">
                     @csrf
                     <div class="mb-3">
                         <label for="categoryName" class="form-label">Category Name:</label>
