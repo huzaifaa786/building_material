@@ -9,9 +9,9 @@ use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
-    public function doctorAll()
+    public function All()
     {
         $doctors = category::all();
-        return Api::setResponse('categary', $doctors);
+        return Api::setResponse('category', $doctors);
     }
 }

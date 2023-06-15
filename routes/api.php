@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -21,3 +22,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::any('user/login', [UserController::class, 'userLogin']);
 
 Route::any('register', [UserController::class, 'patientRegister']);
+Route::any('all/category', [CategoryController::class, 'All']);
