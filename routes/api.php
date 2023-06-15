@@ -23,3 +23,4 @@ Route::any('user/login', [UserController::class, 'userLogin']);
 
 Route::any('register', [UserController::class, 'patientRegister']);
 Route::any('all/category', [CategoryController::class, 'All']);
+Route::any('get/product', [CategoryController::class, 'getproduct']);
