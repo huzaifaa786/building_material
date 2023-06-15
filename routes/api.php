@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 Route::any('user/login', [UserController::class, 'userLogin']);
 
-Route::any('register', [AuthController::class, 'patientRegister']);
+Route::any('register', [UserController::class, 'patientRegister']);
