@@ -2,8 +2,13 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Helpers\Api;
+use App\Helpers\ApiValidate;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use stdClass;
 
 class UserController extends Controller
 {
@@ -21,5 +26,23 @@ class UserController extends Controller
         } else {
             return Api::setError('Invalid credentials');
         }
+    }
+    public function patientRegister(Request $request)
+    {
+
+        $credentials = ApiValidate::register($request, User::class);
+
+
+
+        $user = Userr::find(User::create($credentials)->id);
+
+        return Api::setResponse('user', $user->withToken());
+
+
+
+        $response = new stdClass;
+        $response->user = $user->withToken();
+        // $response->otp = $otp;
+        return response()->json($response);
     }
 }
