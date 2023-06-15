@@ -428,7 +428,7 @@
                         data-dismiss="modal">Cancel</button>
 
                     <a class="btn btn-primary btn-user rounded-pill"
-                        href="{{ route('vendor.auth.login') }}">Logout</a>
+                        href="{{ route('vendor.auth.loginn') }}">Logout</a>
                     @csrf
                 </div>
             </div>

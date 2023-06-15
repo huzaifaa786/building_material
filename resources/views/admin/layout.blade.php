@@ -122,8 +122,8 @@
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         {{-- <h6 class="collapse-header">Login Screens:</h6> --}}
-                        <a class="collapse-item" href="{{ route('admin.vendor.create') }}"> Create Vendor</a>
-                        <a class="collapse-item" href="{{ route('admin.vendor.allvendor') }}">All Vendor</a>
+                        <a class="collapse-item" href="{{ route('admin.vendor.createe') }}"> Create Vendor</a>
+                        <a class="collapse-item" href="{{ route('admin.vendor.allvendorr') }}">All Vendor</a>
                         {{-- <a class="collapse-item" href="forgot-password.html">Forgot Password</a> --}}
                         {{-- <div class="collapse-divider"></div> --}}
                         {{-- <h6 class="collapse-header">Other Pages:</h6> --}}
