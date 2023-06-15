@@ -34,7 +34,7 @@ class UserController extends Controller
 
 
 
-        $user = Userr::find(User::create($credentials)->id);
+        $user = User::find(User::create($credentials)->id);
 
         return Api::setResponse('user', $user->withToken());
 
