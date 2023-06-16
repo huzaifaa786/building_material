@@ -65,6 +65,6 @@ class VendorController extends Controller
     public function logout()
     {
         Auth::guard('vendor')->logout();
-        return redirect()->route('vendor.auth.login');
+        return redirect()->route('vendor.auth.loginn');
     }
 }

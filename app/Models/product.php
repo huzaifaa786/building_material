@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class product extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'price', 'unit', 'stock', 'image1', 'image2', 'image3',  'description', 'discount', 'category_id', 'user_id'];
+    protected $fillable = ['name', 'price', 'unit', 'stock', 'image1', 'image2', 'image3',  'description', 'discount', 'category_id', 'vendor_id'];
 
     public function setImage1Attribute($value)
     {
@@ -35,8 +35,12 @@ class product extends Model
     {
         return asset($value);
     }
-    public static function countProductsByUserId($userId)
+    // public static function countProductsByUserId($userId)
+    // {
+    //     return self::where('user_id', $userId)->count();
+    // }
+    public function vendor()
     {
-        return self::where('user_id', $userId)->count();
+        return $this->belongsTo(Vendor::class);
     }
 }

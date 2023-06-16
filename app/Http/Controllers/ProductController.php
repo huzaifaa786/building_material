@@ -23,7 +23,7 @@ class ProductController extends Controller
         ]);
         product::create([
 
-            'user_id' => auth()->guard('vendor')->user()->id,
+            'vendor_id' => auth()->guard('vendor')->user()->id,
 
             // Add other fields here
         ]+$request->all());
