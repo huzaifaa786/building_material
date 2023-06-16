@@ -39,4 +39,8 @@ class product extends Model
     {
         return self::where('user_id', $userId)->count();
     }
+    public function vendor()
+    {
+        return $this->belongsTo(Vendor::class);
+    }
 }

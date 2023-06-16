@@ -26,7 +26,7 @@ class Vendor extends Authenticatable
     }
     public function prouct()
     {
-        return $this->belongsTo(product::class);
+        return $this->hasMany(product::class);
     }
 
     public function category()
