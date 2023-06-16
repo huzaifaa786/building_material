@@ -18,7 +18,7 @@ class CategoryController extends Controller
 
     public function getproduct(Request $request)
     {
-        $data = product::where('category_id', $request->id) ->get();
+        $data = product::where('category_id', $request->id)->with('vendor') ->get();
         return Api::setResponse('product', $data);
     }
 }

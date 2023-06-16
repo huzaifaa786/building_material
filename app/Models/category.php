@@ -24,4 +24,8 @@ class category extends Model
     {
         return asset($value);
     }
+    public function product()
+    {
+        return $this->belongsTo(product::class);
+    }
 }

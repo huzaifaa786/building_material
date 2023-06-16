@@ -24,4 +24,13 @@ class Vendor extends Authenticatable
             $this->attributes['password'] = Hash::make($value);
         }
     }
+    public function prouct()
+    {
+        return $this->belongsTo(product::class);
+    }
+
+    public function category()
+    {
+        return $this->belongsTo(category::class);
+    }
 }
