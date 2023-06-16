@@ -13,7 +13,7 @@
         <div class="card shadow mb-4">
             @csrf
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">DataTables </h6>
+                <h6 class="m-0 font-weight-bold text-primary">DataTables of Products </h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -74,7 +74,7 @@
                         @csrf
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title mt-0" id="myModalLabel">Update Category</h5>
+                                <h5 class="modal-title mt-0" id="myModalLabel">Update Product</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                             </div>
                             <div class="modal-body">

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Login</title>
+    <title>Admin Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/asset/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -38,7 +38,9 @@
                         <div class="card-body p-0">
                             <!-- Nested Row within Card Body -->
                             <div class="row">
-                                <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                                <div class="col-lg-6 d-none d-lg-block"
+                                    style="background-image: url('{{ asset('admin/asset/img/admin.jpg') }}'); background-size: cover; background-position: center;">
+                                </div>
                                 <div class="col-lg-6">
                                     <div class="p-5">
                                         <div class="text-center">
@@ -62,19 +64,11 @@
                                                         Me</label>
                                                 </div>
                                             </div>
-                                            <button type="submit" href="{{ route('admin.category.create') }}"
+                                            <button type="submit" href=""
                                                 class="btn btn-primary btn-user btn-block">
                                                 Login
                                             </button>
-                                            <hr>
                                         </form>
-                                        <hr>
-                                        <div class="text-center">
-                                            <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                        </div>
-                                        <div class="text-center">
-                                            <a class="small" href="register.html">Create an Account!</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

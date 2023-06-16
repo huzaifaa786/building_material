@@ -13,7 +13,7 @@
         <div class="card shadow mb-4">
             @csrf
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">DataTables </h6>
+                <h6 class="m-0 font-weight-bold text-primary">DataTables OF Vendor </h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -66,7 +66,7 @@
                         @csrf
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title mt-0" id="myModalLabel">Update Category</h5>
+                                <h5 class="modal-title mt-0" id="myModalLabel">Update Vendors</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
                             </div>
                             <div class="modal-body">
@@ -74,23 +74,23 @@
                                     <label for="name">Name</label>
                                     <input class="form-control" type="hidden" name="id" id="id">
                                     <input class="form-control" type="text" id="name" name="name"
-                                        placeholder="Product name" required>
+                                        placeholder="name" required>
 
                                     <div class="row">
                                         <div class="col-md-6">
                                             <label for="price">Email</label>
                                             <input class="form-control" type="text" id="email" name="email"
-                                                placeholder="Product Price" required>
+                                                placeholder="Email" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="stock">Address</label>
                                             <input class="form-control" type="text" id="address" name="address"
-                                                placeholder="Product stock" required>
+                                                placeholder="Address" required>
                                         </div>
                                         <div class="col-md-6">
                                             <label for="stock">Phone</label>
                                             <input class="form-control" type="text" id="phone" name="phone"
-                                                placeholder="Product discount" required>
+                                                placeholder="Phone" required>
                                         </div>
                                     </div>
 
@@ -115,7 +115,7 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="deleteModalLabel">Delete Product?</h5>
+                    <h5 class="modal-title" id="deleteModalLabel">Delete Vendor?</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>

@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Material Services</title>
+    <title>Vendor Login</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{ asset('admin/asset/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
@@ -33,13 +33,14 @@
             <div class="col-xl-10 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
-                    <form action="" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('vendor.auth.login') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body p-0">
                             <!-- Nested Row within Card Body -->
                             <div class="row">
-                                <div class="col-lg-6 d-none d-lg-block bg-image"
-                                    style="background-image: url('{{ asset('admin/asset/img/undr.jpg') }}');"></div>
+                                <div class="col-lg-6 d-none d-lg-block"
+                                    style="background-image: url('{{ asset('admin/asset/img/login.jpg') }}'); background-size: cover; background-position: center;">
+                                </div>
                                 <div class="col-lg-6">
                                     <div class="p-5">
                                         <div class="text-center">
@@ -67,15 +68,7 @@
                                                 class="btn btn-primary btn-user btn-block">
                                                 Login
                                             </button>
-                                            <hr>
                                         </form>
-                                        <hr>
-                                        <div class="text-center">
-                                            <a class="small" href="forgot-password.html">Forgot Password?</a>
-                                        </div>
-                                        <div class="text-center">
-                                            <a class="small" href="register.html">Create an Account!</a>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

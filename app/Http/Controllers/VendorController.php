@@ -44,7 +44,7 @@ class VendorController extends Controller
         // Redirect the user back to the categories list with a success message
         return redirect()->back()->with('success', 'product deleted successfully');
     }
-    public function login(Request $request)
+    public function vendorLogin(Request $request)
     {
         $request->validate([
             'email' => 'required',
