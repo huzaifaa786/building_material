@@ -35,10 +35,10 @@ class product extends Model
     {
         return asset($value);
     }
-    public static function countProductsByUserId($userId)
-    {
-        return self::where('user_id', $userId)->count();
-    }
+    // public static function countProductsByUserId($userId)
+    // {
+    //     return self::where('user_id', $userId)->count();
+    // }
     public function vendor()
     {
         return $this->belongsTo(Vendor::class);
