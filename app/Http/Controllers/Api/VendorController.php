@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Vendor;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PhpParser\Node\Expr\Cast\Object_;
 
 class VendorController extends Controller
 {
@@ -21,7 +22,9 @@ class VendorController extends Controller
 
         $vendor = Vendor::find($request->vendor_id);
 
+   
         $products = $vendor->products;
+        $products->vendor = $vendor;
 
         return Api::setResponse('products', $products);
 
