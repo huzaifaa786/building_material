@@ -24,7 +24,7 @@ class Vendor extends Authenticatable
             $this->attributes['password'] = Hash::make($value);
         }
     }
-    public function prouct()
+    public function products()
     {
         return $this->hasMany(product::class);
     }

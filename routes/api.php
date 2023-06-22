@@ -27,6 +27,7 @@ Route::any('all/category', [CategoryController::class, 'All']);
 Route::any('get/product', [CategoryController::class, 'getproduct']);
 
 // vendor routes
-Route::any('vendor/all', [VendorController::class, 'allVendors']);
-
-
+Route::group(['middleware' => 'auth:api'], function () {
+    Route::any('vendor/all', [VendorController::class, 'allVendors']);
+    Route::any('vendor/products', [VendorController::class, 'vendorProducts']);
+});
