@@ -23,7 +23,5 @@ class VendorController extends Controller
       $products =  $vendor->products;
 
       return Api::setResponse('products', $products);
-
-
     }
 }

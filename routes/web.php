@@ -47,6 +47,6 @@ Route::get('delete/{id}', [VendorController::class, 'delete'])->name('delete_ven
 Route::post('all/vendor', [VendorController::class, 'update'])->name('vendor/all');
 Route::view('vendor/layout', 'vendor.layout');
 Route::view('vendor/login', 'vendor.auth.login')->name('vendor.auth.login');
-Route::post('vendor/login', [VendorController::class, 'login'])->name('vendor.auth.store');
-Route::get('logout', [VendorController::class, 'logout'])->name('logout/page');
+Route::post('vendor/login', [VendorController::class, 'vendorLogin'])->name('vendor.auth.store');
+Route::get('logout', [VendorController::class, 'logout'])->name('logout.vendor');
 Route::view('vendor/dashboard', 'vendor.dashboard.dashboard')->name('vendor.dashboard.dashboard');
