@@ -5,7 +5,7 @@
         <div class="col-md-6">
             <div class="card shadow-lg">
                 <div class="card-body">
-                    <form method="post" action="{{ route('admin.vendor.create') }}">
+                    <form method="post" action="{{ route('admin.vendor.store') }}">
                         @csrf
                         <div class="mb-3">
                             <label for="name" class="form-label">Name:</label>

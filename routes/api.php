@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\UserController;
+use App\Http\Controllers\Api\VendorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -24,3 +25,8 @@ Route::any('user/login', [UserController::class, 'userLogin']);
 Route::any('register', [UserController::class, 'patientRegister']);
 Route::any('all/category', [CategoryController::class, 'All']);
 Route::any('get/product', [CategoryController::class, 'getproduct']);
+
+// vendor routes
+Route::any('vendor/all', [VendorController::class, 'allVendors']);
+
+

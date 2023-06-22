@@ -33,7 +33,7 @@
             <div class="col-xl-10 col-lg-12 col-md-9">
 
                 <div class="card o-hidden border-0 shadow-lg my-5">
-                    <form action="{{ route('vendor.auth.login') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('vendor.auth.store') }}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="card-body p-0">
                             <!-- Nested Row within Card Body -->
