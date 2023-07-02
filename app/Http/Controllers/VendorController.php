@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Vendor;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -16,6 +17,8 @@ class VendorController extends Controller
             'password' => 'required',
             'address' => 'required|max:255',
             'phone' => 'required|numeric',
+            'lat' => 'required',
+            'lng' => 'required',
         ]);
 
         Vendor::create($request->all());
@@ -67,4 +70,21 @@ class VendorController extends Controller
         Auth::guard('vendor')->logout();
         return redirect()->route('vendor.auth.loginn');
     }
+    public function showProducts($id)
+    {
+        $vendor = Vendor::find($id);
+        $products = $vendor->products;
+        // dd($products);
+    // dd($vendor->prouct);
+        return view('admin.vendor.products', compact('products'));
+    }
+    public function orderHistory()
+{
+    $orders = Order::where('vendor_id', auth()->guard('vendor')->user()->id)
+        ->orderBy('created_at', 'desc')
+        ->get();
+    return view('vendororders.orders', compact('orders'));
+}
+
+
 }

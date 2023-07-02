@@ -12,7 +12,7 @@ class Vendor extends Authenticatable
     use HasFactory;
 
     protected $guard = "vendor";
-    protected $fillable = ['name', 'email', 'password', 'address', 'phone'];
+    protected $fillable = ['name', 'email', 'password', 'address', 'phone','lat','lng'];
 
     protected $hidden = [
         'password',

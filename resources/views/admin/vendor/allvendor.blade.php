@@ -25,7 +25,10 @@
                                 <td>Email Address</td>
                                 <td>Address</td>
                                 <td>Phone</td>
+                                <td>Vendor lat</td>
+                                <td>Vendor lng</td>
                                 <td> Edit</td>
+                                <td> Vendor Products</td>
                                 <td> Delete</td>
 
                             </tr>
@@ -38,12 +41,17 @@
                                     <td>{{ $vendor->email }}</td>
                                     <td>{{ $vendor->address }}</td>
                                     <td>{{ $vendor->phone}}</td>
+                                    <td>{{ $vendor->lat}}</td>
+                                    <td>{{ $vendor->lng}}</td>
                                     <td>
                                         <button id="{{ $vendor->id }}" name="{{ $vendor->name }}"
                                             email="{{ $vendor->email }}" address="{{ $vendor->address }}"
-                                            phone="{{ $vendor->phone }}"
+                                            phone="{{ $vendor->phone }}" lat="{{$vendor->lat}}" lng="{{$vendor->lng}}"
                                             data-toggle="modal" data-target="#myModal"
                                             class="btn btn-info btn-sm rounded-pill editBtn">Edit</button>
+                                    </td>
+                                    <td>
+                                        <a href="{{ route('vendor.products', ['id' => $vendor->id]) }}" class="btn btn-success btn-sm rounded-pill">Products</a>
                                     </td>
                                     <td>
                                         <button type="button" class="btn btn-danger btn-sm rounded-pill deleteBtn"
@@ -90,6 +98,16 @@
                                             <label for="stock">Phone</label>
                                             <input class="form-control" type="text" id="phone" name="phone"
                                                 placeholder="Phone" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="stock">Lat</label>
+                                            <input class="form-control" type="text" id="lat" name="lat"
+                                                placeholder="Latitude" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="stock">Lng</label>
+                                            <input class="form-control" type="text" id="lng" name="lng"
+                                                placeholder="Longitiude" required>
                                         </div>
                                     </div>
 
@@ -150,12 +168,16 @@
                 let email = $(this).attr('email');
                 let address = $(this).attr('address');
                 let phone= $(this).attr('phone');
+                let lat= $(this).attr('lat');
+                let lng= $(this).attr('lng');
 
                 $('#name').val(name);
                 $('#id').val(id);
                 $('#email').val(email);
                 $('#address').val(address);
                 $('#phone').val(phone);
+                $('#lat').val(lat);
+                $('#lng').val(lng);
             });
             $('.deleteBtn').click(function() {
 
