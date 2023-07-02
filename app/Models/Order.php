@@ -13,6 +13,9 @@ class Order extends Model
         'user_id',
         'total',
         'vendor_id',
+        'name',
+        'phone',
+        'address',
         'status',
     ];
 
