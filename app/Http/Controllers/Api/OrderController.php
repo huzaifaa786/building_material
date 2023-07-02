@@ -34,7 +34,7 @@ class OrderController extends Controller
 
     public function orderHistory(Request $request)
     {
-        $orders = Order::where('user_id', Auth::user()->id)->get();
+        $orders = Order::where('user_id', Auth::user()->id)->with('vendor')->with('user')->with('items')->get();
         return Api::setResponse('orders', $orders);
     }
 }
