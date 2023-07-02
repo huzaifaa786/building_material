@@ -19,7 +19,19 @@ class Order extends Model
         'status',
     ];
 
-    public function items(){
+    public function items()
+    {
         return $this->hasMany(OrderItem::class);
     }
+
+    public function vendor()
+    {
+        return $this->belongsTo(Vendor::class, 'vendor_id');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+
 }
