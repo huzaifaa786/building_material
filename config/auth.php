@@ -86,7 +86,6 @@ return [
             'model' => App\Models\Vendor::class,
         ],
 
-
         // 'users' => [
         //     'driver' => 'database',
         //     'table' => 'users',

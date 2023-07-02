@@ -50,7 +50,6 @@
                                             data-toggle="modal" id="{{ $vendor->id }}"
                                             data-target="#deleteModal">Delete</button>
                                     </td>
-
                                 </tr>
                             @endforeach
 

@@ -1,5 +1,4 @@
 @extends('vendor.layout')
-
 @section('content')
     <div class="container-fluid">
         <div class="card" style="width: 80rem;">
