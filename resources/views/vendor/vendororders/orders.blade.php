@@ -12,9 +12,10 @@
                         <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Vendor order</th>
-                                <th>Edit</th>
-                                <th>Delete</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                                <th>Products</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -25,8 +26,12 @@
                                     <td>{{ $order->name }}</td>
                                     <td>{{ $order->phone }}</td>
                                     <td>{{ $order->address }}</td>
-
-                               
+                                    <td>
+                                        @foreach ($order->items as $item)
+                                            {{$item->product->name}} x 1
+                                            <br>
+                                                                                    @endforeach
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
