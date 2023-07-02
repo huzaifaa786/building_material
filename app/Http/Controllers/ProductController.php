@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -34,6 +35,11 @@ class ProductController extends Controller
     public function index()
     {
         $products = product::all();
+        return view('vendor.product.allproducts', ['products' => $products,]);
+    } 
+    public function vendorIndex()
+    {
+        $products = product::where('vendor_id',auth()->user()->id)->get();;
         return view('vendor.product.allproducts', ['products' => $products,]);
     }
     public function update(Request $request)

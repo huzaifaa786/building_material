@@ -83,7 +83,7 @@ class VendorController extends Controller
     $orders = Order::where('vendor_id', auth()->guard('vendor')->user()->id)
         ->orderBy('created_at', 'desc')
         ->get();
-    return view('vendororders.orders', compact('orders'));
+    return view('vendor.vendororders.orders', compact('orders'));
 }
 
 
