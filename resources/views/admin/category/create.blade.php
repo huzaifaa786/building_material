@@ -11,6 +11,11 @@
                         <label for="categoryName" class="form-label">Category Name:</label>
                         <input type="text" name="name" class="form-control" id="categoryName" required>
                     </div>
+                    <div class="mb-3">
+                        <label for="categoryimage" class="form-label">Category Image:</label>
+                        <input type="file" name="image" class="form-control" id="categoryImage" required>
+                    </div>
+
                     <div class="d-grid gap-2 mt-4">
                         <button type="submit" class="btn btn-primary btn-user rounded-pill ">Submit</button>
                     </div>
