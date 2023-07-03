@@ -32,7 +32,7 @@ class Order extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
-    public function product()
+    public function products()
     {
         return $this->hasMany(product::class,);
     }
