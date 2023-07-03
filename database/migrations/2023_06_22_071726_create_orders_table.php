@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('vendor_id');
             $table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade');
+  
             $table->bigInteger('total')->nullable();
             $table->integer('total_qty')->nullable();
             $table->enum('status', ['Pending', 'Delivered', 'Cancelled'])->default('Pending');

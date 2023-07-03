@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\OrderController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Controllers\Api\VendorController;
 use Illuminate\Http\Request;
@@ -29,4 +30,6 @@ Route::any('get/product', [CategoryController::class, 'getproduct']);
 Route::group(['middleware' => 'auth:api'], function () {
     Route::any('vendor/all', [VendorController::class, 'allVendors']);
     Route::any('vendor/products', [VendorController::class, 'vendorProducts']);
+    Route::any('order/create', [OrderController::class, 'placeOrder']);
+    Route::any('order/history', [OrderController::class, 'orderHistory']);
 });

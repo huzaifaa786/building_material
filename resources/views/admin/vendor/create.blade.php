@@ -47,6 +47,22 @@
                                 <div class="invalid-feedback">{{ $message }}</div>
                             @enderror
                         </div>
+                        <div class="mb-3">
+                            <label for="Vendor lat" class="form-label">Vendor lat:</label>
+                            <input type="text" name="lat" class="form-control @error('lat') is-invalid @enderror"
+                                id="vendor lat" required>
+                                @error('lat')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
+                        <div class="mb-3">
+                            <label for="Vendor long" class="form-label">Vendor lng:</label>
+                            <input type="text" name="lng" class="form-control @error('lng') is-invalid @enderror"
+                                id="vendor lat" required>
+                                @error('lng')
+                                <div class="invalid-feedback">{{ $message }}</div>
+                            @enderror
+                        </div>
                         <div class="d-grid gap-2 mt-4">
                             <button type="submit" class="btn btn-primary btn-user rounded-pill">Submit</button>
                         </div>

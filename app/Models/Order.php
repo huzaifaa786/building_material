@@ -13,10 +13,25 @@ class Order extends Model
         'user_id',
         'total',
         'vendor_id',
+        'name',
+        'phone',
+        'address',
         'status',
     ];
 
-    public function items(){
+    public function items()
+    {
         return $this->hasMany(OrderItem::class);
     }
+
+    public function vendor()
+    {
+        return $this->belongsTo(Vendor::class, 'vendor_id');
+    }
+    public function user()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
+
+
 }

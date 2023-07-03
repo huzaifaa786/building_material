@@ -34,7 +34,7 @@ Route::post('product/store', [ProductController::class, 'store'])->name('product
 Route::get('admin/category/allcategories', [CategoryController::class, 'index'])->name('admin.category.allcategories');
 Route::get('category/{id}', [CategoryController::class, 'destroy'])->name('delete_category');
 Route::get('vendor/product/create', [CategoryController::class, 'show'])->name('vendor.product.create');
-Route::get('vendor/product/allproducts', [ProductController::class, 'index'])->name('vendor.product.allproducts');
+Route::get('vendor/product/allproducts', [ProductController::class, 'vendorIndex'])->name('vendor.product.allproducts')->middleware(['auth:vendor']);
 Route::post('all/product', [ProductController::class, 'update'])->name('product/all');
 Route::get('del/{id}', [ProductController::class, 'destroy'])->name('del_product');
 Route::post('admin/login', [AdminController::class, 'login'])->name('admin.auth.login');
@@ -50,3 +50,7 @@ Route::view('vendor/login', 'vendor.auth.login')->name('vendor.auth.login');
 Route::post('vendor/login', [VendorController::class, 'vendorLogin'])->name('vendor.auth.store');
 Route::get('logout', [VendorController::class, 'logout'])->name('logout.vendor');
 Route::view('vendor/dashboard', 'vendor.dashboard.dashboard')->name('vendor.dashboard.dashboard');
+Route::get('vendor/products/{id}', [VendorController::class, 'showProducts'])->name('vendor.products');
+Route::view('admin/index', 'admin.admindashboard.index')->name('admin.dashboard.index');
+// Route::view('vendor/orders', 'vendor.vendororders.orders')->name('vendor.orders');
+Route::get('vendor/order',  [VendorController::class, 'orderHistory'])->name('vendor.orders');
