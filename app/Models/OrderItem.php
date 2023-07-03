@@ -20,6 +20,6 @@ class OrderItem extends Model
         'updated_at'
     ];
     public function products(){
-        return $this->belongsTo(product::class);
+        return $this->belongsTo(product::class,'product_id');
     }
 }
