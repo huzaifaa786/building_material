@@ -28,7 +28,7 @@
                                     <td>{{ $order->address }}</td>
                                     <td>
                                         @foreach ($order->items as $item)
-                                            {{$item->product->name}} x 1
+                                            {{$item->products->name}} x 1
                                             <br>
                                                                                     @endforeach
                                     </td>
