@@ -30,7 +30,7 @@
                                         @foreach ($order->items as $item)
                                             {{$item->products->name}} x 1
                                             <br>
-                                                                                    @endforeach
+                                        @endforeach
                                     </td>
                                 </tr>
                             @endforeach
